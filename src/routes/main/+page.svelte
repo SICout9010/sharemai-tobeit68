@@ -55,11 +55,11 @@
 
 <div class="w-full flex min-h-screen font-[prompt]">
     <!-- Main Content -->
-    <div class="flex-1 w-full min-h-screen p-4">
+    <div class="flex-1 w-full min-h-screen md:p-4">
 
-        <div class="flex items-center justify-center gap-10 h-full">
+        <div class="relative flex items-center justify-center gap-10 h-full">
             <!-- Googles Map -->
-            <div class="w-[50%] h-full space-y-4">
+            <div class="w-full md:w-[50%] h-full space-y-4">
                 <div class="bg-muted w-full min-h-[8vh] rounded-lg shadow-lg flex items-center">
                     <MapMarkerRadiusOutline class="w-12 h-12 m-2" />
                     <p>{desirelocation}</p>
@@ -70,9 +70,9 @@
             </div>
 
             <!-- Profile Cards --> 
-            <div class="flex flex-col items-center justify-center gap-10 w-[50%]">
+            <div class="flex flex-col items-center justify-center gap-10 absolute w-full md:w-[50%] md:relative -bottom-10">
                 <!-- Top Navigation -->
-                <div class="flex justify-between items-center gap-2 w-full h-full">
+                <div class="hidden md:flex justify-between items-center gap-2 w-full h-full">
                     <Button variant="default">🔎</Button>
                     <Input placeholder="Search" />
                 </div>
