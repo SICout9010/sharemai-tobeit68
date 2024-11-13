@@ -7,12 +7,14 @@
     import { onMount } from 'svelte';
     import { loadGoogleMaps, defaultConfig } from '$lib/google';
     import MapMarkerRadiusOutline from 'virtual:icons/mdi/map-marker-radius-outline';
+  import PostCard from "$lib/components/main/PostCard.svelte";
     
     let mapElement: HTMLElement;
     let map: google.maps.Map;
     let desirelocation: string | undefined = $state();
 
     let { data } = $props();
+    console.log(data);
 
     onMount(async () => {
         await loadGoogleMaps();
@@ -66,19 +68,19 @@
                     <MapMarkerRadiusOutline class="w-12 h-12 m-2" />
                     <p>{desirelocation}</p>
                 </div>
-                <div bind:this={mapElement} class="w-full h-full rounded-lg shadow-lg flex items-center justify-center">
+                <div bind:this={mapElement} class="w-full h-full rounded-lg rounded-b-none shadow-lg flex items-center justify-center">
     
                 </div>
             </div>
 
             <!-- Profile Cards --> 
-            <div class="flex flex-col items-center justify-center gap-10 absolute w-full md:w-[50%] md:relative -bottom-10">
+            <div class="hidden md:flex flex-col items-center justify-start gap-10 w-full h-full md:w-[50%]">
                 <!-- Top Navigation -->
-                <div class="hidden md:flex justify-between items-center gap-2 w-full h-full">
+                <div class="hidden md:flex justify-between items-center gap-2 w-full h-[5vh]">
                     <Button variant="default">🔎</Button>
                     <Input placeholder="Search" />
                 </div>
-                <Card.Root class="w-full p-4">
+                <!-- <Card.Root class="hidden md:w-full p-4">
                     <Card.Header>
                         <Card.Title class="flex items-center gap-2">
                             <Avatar.Root>
@@ -94,23 +96,9 @@
                         <p>Joined November 2024</p>
                         <p>Male, 18</p>
                     </Card.Content>
-                </Card.Root>
+                </Card.Root> -->
                 {#each data.posts as post}
-                    <Card.Root class="w-full p-4">
-                        <Card.Header>
-                            <Card.Title class="flex items-center gap-2">
-                                <Avatar.Root>
-                                    <Avatar.Image src="https://media.tenor.com/Db9euJyQnbUAAAAi/chat-pouce.gif" alt="@shadcn" />
-                                    <Avatar.Fallback>CN</Avatar.Fallback>
-                                </Avatar.Root>
-                                {post.expand?.user_id.fullname}
-                            </Card.Title>
-                            <Card.Description>{post.created}</Card.Description>
-                        </Card.Header>
-                        <Card.Content>
-                            <p>{post.additional_notes}</p>
-                        </Card.Content>
-                    </Card.Root>
+                    <PostCard data={post} />
                 {/each}
             </div>
         </div>

@@ -1,13 +1,18 @@
-export const load = ({ locals }) => {
-    if (locals.user) {
-        console.log("User exists")
-        return {
-            user: locals.user
-        }
+import { redirect } from "@sveltejs/kit";
+import type { LayoutServerLoad } from "../$types";
+
+export const load: LayoutServerLoad = async ({ locals }) => {
+    // Check if the user is authenticated
+    if (!locals.pb.authStore.isValid) {
+        throw redirect(303, '/auth');
     }
-    
-    console.log("User does not exist")
+
+    const post_records = await locals.pb.collection('posts').getFullList({
+        expand: "user_id",
+        sort: '-created'
+    });
+
     return {
-        user: undefined
+        posts: post_records,
     }
 }

@@ -17,8 +17,8 @@
   
   <!-- ปุ่ม Sign Up และ Login ทางขวา -->
   <div class="flex space-x-4">
-    <Button class="bg-[#1E2031] text-white font-semibold px-4 py-2 rounded">Sign Up</Button>
-    <Button class="bg-[#1E2031] text-white font-semibold px-4 py-2 rounded ">Login</Button>
+    <Button class="bg-[#1E2031] text-white font-semibold px-4 py-2 rounded" href="/auth">Sign Up</Button>
+    <Button class="bg-[#1E2031] text-white font-semibold px-4 py-2 rounded " href="/main">Login</Button>
   </div>
 </header>
 

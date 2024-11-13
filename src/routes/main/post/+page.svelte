@@ -43,13 +43,13 @@
              <div class="w-full md:w-[50%] flex items-center justify-center gap-10 h-full">
                 <Card.Root class="w-full max-w-2xl h-full">
                     <Card.Header>
-                        <Card.Title class="text-2xl">Share your location</Card.Title>
+                        <Card.Title class="text-2xl">Share your location {data.user?.fullname}</Card.Title>
                         <Card.Description>Share your location with others</Card.Description>
                     </Card.Header>
                     <Card.Content>
                         <div class="space-y-4">
                             <Avatar.Root class="w-24 h-24 mx-auto">
-                                <Avatar.Image src={data?.avatar} alt={data?.name} />
+                                <Avatar.Image src={data.user?.avatar} alt={data.user?.fullname} />
                             </Avatar.Root>
                             <Button class="w-full">Share Location</Button>
                         </div>
