@@ -22,7 +22,7 @@
                         <Avatar.Fallback>CN</Avatar.Fallback>
                     </Avatar.Root>
                     <p>You're logged with {user.username}</p>
-                    <form method="post" action="?/logout" use:enhance>
+                    <form method="post" action="?/logout">
                         <Button type="submit" class="w-64">Logout</Button>
                     </form>
                 </div>
@@ -38,7 +38,7 @@
             {/if}
         </div>
         <!-- Side background -->
-        <div class="bg-[#475569] w-[50%] h-screen">
+        <div class="hidden md:flex bg-[#475569] w-[50%] h-screen">
 
         </div>
     </div>

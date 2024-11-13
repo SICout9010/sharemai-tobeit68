@@ -10,7 +10,9 @@
     
     let mapElement: HTMLElement;
     let map: google.maps.Map;
-    let desirelocation: string | undefined = '';
+    let desirelocation: string | undefined = $state();
+
+    let { data } = $props();
 
     onMount(async () => {
         await loadGoogleMaps();
@@ -93,40 +95,23 @@
                         <p>Male, 18</p>
                     </Card.Content>
                 </Card.Root>
-                <Card.Root class="w-full p-4">
-                    <Card.Header>
-                        <Card.Title class="flex items-center gap-2">
-                            <Avatar.Root>
-                                <Avatar.Image src="https://media.tenor.com/Db9euJyQnbUAAAAi/chat-pouce.gif" alt="@shadcn" />
-                                <Avatar.Fallback>CN</Avatar.Fallback>
-                            </Avatar.Root>
-                            @UserA007X
-                        </Card.Title>
-                        <Card.Description>Joined November 2024</Card.Description>
-                    </Card.Header>
-                    <Card.Content>
-                        <p>สวัสดีครับ ผมคือแฮกเกอร์ครับ</p>
-                        <p>Joined November 2024</p>
-                        <p>Male, 18</p>
-                    </Card.Content>
-                </Card.Root>
-                <Card.Root class="w-full p-4">
-                    <Card.Header>
-                        <Card.Title class="flex items-center gap-2">
-                            <Avatar.Root>
-                                <Avatar.Image src="https://media.tenor.com/Db9euJyQnbUAAAAi/chat-pouce.gif" alt="@shadcn" />
-                                <Avatar.Fallback>CN</Avatar.Fallback>
-                            </Avatar.Root>
-                            @UserA007X
-                        </Card.Title>
-                        <Card.Description>Joined November 2024</Card.Description>
-                    </Card.Header>
-                    <Card.Content>
-                        <p>สวัสดีครับ ผมคือแฮกเกอร์ครับ</p>
-                        <p>Joined November 2024</p>
-                        <p>Male, 18</p>
-                    </Card.Content>
-                </Card.Root>
+                {#each data.posts as post}
+                    <Card.Root class="w-full p-4">
+                        <Card.Header>
+                            <Card.Title class="flex items-center gap-2">
+                                <Avatar.Root>
+                                    <Avatar.Image src="https://media.tenor.com/Db9euJyQnbUAAAAi/chat-pouce.gif" alt="@shadcn" />
+                                    <Avatar.Fallback>CN</Avatar.Fallback>
+                                </Avatar.Root>
+                                {post.expand?.user_id.fullname}
+                            </Card.Title>
+                            <Card.Description>{post.created}</Card.Description>
+                        </Card.Header>
+                        <Card.Content>
+                            <p>{post.additional_notes}</p>
+                        </Card.Content>
+                    </Card.Root>
+                {/each}
             </div>
         </div>
         

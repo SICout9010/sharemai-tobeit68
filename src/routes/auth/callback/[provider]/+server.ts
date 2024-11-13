@@ -23,10 +23,10 @@ export const GET: RequestHandler = async ({ locals, url, cookies }) => {
         formData.append('avatar', await fetch(authData.meta?.avatarUrl).then(res => res.blob()), `${locals.pb.authStore.model?.id}-avatar.jpg`);
 
         await locals.pb.collection('users').update(locals.pb.authStore.model?.id, formData)
-
-        return redirect(303, '/main');
     } catch (e) {
         console.log(e);
         return redirect(303, '/auth?fail=true');
     }
+
+    throw redirect(303, '/main');
 }
