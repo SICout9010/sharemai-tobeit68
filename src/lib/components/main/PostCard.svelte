@@ -2,12 +2,20 @@
     import { PUBLIC_POCKETBASE_URL } from "$env/static/public";
     import * as Card from "$lib/components/ui/card";
     import * as Avatar from "$lib/components/ui/avatar";
+    import { selectedRoute } from "$lib/stores/route";
     import type { RecordModel } from "pocketbase";
 
     let { data }: { data: RecordModel } = $props();
+
+    const handleClick = () => {
+        selectedRoute.set({
+            start: data.departure_location,
+            end: data.destination
+        })
+    };
 </script>
 
-<Card.Root class="w-[90%] p-4">
+<Card.Root onclick={handleClick} class="w-[90%] p-4 hover:shadow-2xl hover:ring-2 cursor-pointer">
     <Card.Header>
         <Card.Title class="flex items-center gap-2">
             <Avatar.Root>

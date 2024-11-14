@@ -6,6 +6,7 @@
     import { Label } from "$lib/components/ui/label";
     import { Button } from "$lib/components/ui/button";
     import { CreditCard } from "lucide-svelte";
+    import { toast } from "svelte-sonner";
   
     let paymentMethod = 'credit-card';
     let cardNumber = '';
@@ -14,9 +15,33 @@
     let cardholderName = '';
     let amountToPay: string = '5';
   
-    const handleSubmit = () => {
+    const handleSubmit = async () => {
       // Handle payment submission
       console.log({ paymentMethod, cardNumber, expirationDate, cvv, cardholderName });
+
+      // Call API to process payment
+      const response = await fetch('/api/pay', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          amountToPay: Number(amountToPay),
+          paymentMethod,
+          cardNumber,
+          expirationDate,
+          cvv,
+          cardholderName,
+        }),
+      })
+      const data = await response.json();
+      console.log(data);
+
+      if (response.ok) {
+        toast.success('Payment successful');
+      } else {
+        toast.error('Payment failed');
+      }
     }
   </script>
   

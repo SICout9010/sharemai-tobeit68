@@ -6,9 +6,9 @@
     import * as Avatar from "$lib/components/ui/avatar";
     import * as Drawer from "$lib/components/ui/drawer";
     import { page } from "$app/stores";
-  import { buttonVariants } from '$lib/components/ui/button/button.svelte';
-  import { Button } from '$lib/components/ui/button/index.js';
-  import PostCard from '$lib/components/main/PostCard.svelte';
+    import { buttonVariants } from '$lib/components/ui/button/button.svelte';
+    import { Button } from '$lib/components/ui/button/index.js';
+    import PostCard from '$lib/components/main/PostCard.svelte';
     
     let { children, data } = $props();
 </script>
@@ -22,9 +22,11 @@
                     <Sidebar.MenuItem>
                         {#if $page.url.pathname === '/main'}
                             <div class="flex flex-col items-center justify-center">
-                                <p class="text-4xl">$ 1,500</p>
+                                <p class="text-4xl">$ {data.user?.credits ?? 0}</p>
                                 <p class="text-sm">Available Balance</p>
-                                <Sidebar.MenuButton>Payment</Sidebar.MenuButton>
+                                <Sidebar.MenuButton>
+                                    <a href="/main/payment">Payment</a>
+                                </Sidebar.MenuButton>
                             </div>
                         {:else}
                             <div class="flex flex-col items-center justify-center">
@@ -92,7 +94,7 @@
                         {/each}
                     </div>
                     <Drawer.Footer class="pt-2">
-                        <Button>Create Post</Button>
+                        <Button href="/main/post">Create Post</Button>
                         <Drawer.Close class={buttonVariants({ variant: "outline" })}
                         >Cancel</Drawer.Close
                         >

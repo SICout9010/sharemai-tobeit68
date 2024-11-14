@@ -1,20 +1,21 @@
 <script lang="ts">
+    import * as Card from "$lib/components/ui/card";
+    import * as Avatar from "$lib/components/ui/avatar";
+    import * as Popover from "$lib/components/ui/popover/index.js";
+    import * as Select from "$lib/components/ui/select/index.js";
     import Input from "$lib/components/ui/input/input.svelte";
     import Label from "$lib/components/ui/label/label.svelte";
     import CalendarIcon from "lucide-svelte/icons/calendar";
+    import YearCalender from "$lib/components/main/profile/YearCalender.svelte";
+    import Textarea from "$lib/components/ui/textarea/textarea.svelte";
+    import { cn } from "$lib/utils.js";
+    import { Button } from "$lib/components/ui/button/index.js";
+    import { enhance } from "$app/forms";
     import {
         type DateValue,
         DateFormatter,
-        getLocalTimeZone,
-        toLocalTimeZone,
     } from "@internationalized/date";
-    import { cn } from "$lib/utils.js";
-    import { Button } from "$lib/components/ui/button/index.js";
-    import YearCalender from "$lib/components/main/profile/YearCalender.svelte";
-    import * as Popover from "$lib/components/ui/popover/index.js";
-    import * as Select from "$lib/components/ui/select/index.js";
-    import Textarea from "$lib/components/ui/textarea/textarea.svelte";
-    import { enhance } from "$app/forms";
+    import { PUBLIC_POCKETBASE_URL } from "$env/static/public";
     
     const df = new DateFormatter("en-US", {
         dateStyle: "long",
@@ -31,7 +32,29 @@
         formData.append("birthday", birthday_value ? birthday_value.toString() : '');
         formData.append("gender", gender_value || '');
     }}>
-        <div class="grid grid-cols-2 grid-rows-3 gap-24">
+        <!-- Card showing profile -->
+        <Card.Root class="w-full md:max-w-2xl p-2">
+            <Card.Header>
+                <Card.Title class="text-2xl">Profile</Card.Title>
+            </Card.Header>
+            <Card.Content class="space-y-4 md:flex items-center justify-between">
+                <div class="flex items-center gap-4">
+                    <Avatar.Root>
+                        <Avatar.Image src={`${PUBLIC_POCKETBASE_URL}/api/files/${data.user?.collectionId}/${data.user?.id}/${data.user?.avatar}`} alt="user-avatar" />
+                        <Avatar.Fallback>{data.user?.fullname}</Avatar.Fallback>
+                    </Avatar.Root>
+                    <div class="flex flex-col">
+                        <p class="text-2xl">{data.user?.fullname}</p>
+                        <p class="text-muted-foreground">{data.user?.nickname}</p>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center justify-center gap-4">
+                    <p class="text-4xl">${data.user?.credits ?? 0}</p>
+                    <Button class="shadow-lg" variant="outline" href='/main/payment'>Payment</Button>
+                </div>
+            </Card.Content>
+        </Card.Root>
+        <div class="grid grid-cols-2 grid-rows-3 gap-4 md:gap-24">
             <div>
                 <Label for="fullname" class="text-2xl">Full name</Label>
                 <Input type="text" name="fullname" value={data.user?.fullname} id="fullname" placeholder="Ton Tonkrub" />
@@ -40,7 +63,7 @@
                 <Label for="nickname" class="text-2xl">Nickname</Label>
                 <Input type="text" name="nickname" value={data.user?.nickname} id="nickname" placeholder="tontonton" />
             </div>
-            <div class="flex flex-col">
+            <div class="flex flex-col col-span-2 md:col-span-1">
                 <Label class="text-2xl">Birthday</Label>
                 <Popover.Root>
                     <Popover.Trigger>
@@ -60,7 +83,7 @@
                     </Popover.Content>
                 </Popover.Root>
             </div>
-            <div>
+            <div class="col-span-2 md:col-span-1">
                 <Label class="text-2xl">Gender</Label>
                 <Select.Root type="single" bind:value={gender_value}>
                     <Select.Trigger class="w-[180px]">

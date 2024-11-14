@@ -1,27 +1,34 @@
 <script lang="ts">
     // import { Button, Card, Input, Avatar, Separator } from '@shadcn/ui-svelte';
     import { Button } from "$lib/components/ui/button";
-    import * as Card from "$lib/components/ui/card";
     import { Input } from "$lib/components/ui/input";
-    import * as Avatar from "$lib/components/ui/avatar";
     import { onMount } from 'svelte';
     import { loadGoogleMaps, defaultConfig } from '$lib/google';
+    import { selectedRoute } from "$lib/stores/route.js";
     import MapMarkerRadiusOutline from 'virtual:icons/mdi/map-marker-radius-outline';
-  import PostCard from "$lib/components/main/PostCard.svelte";
+    import PostCard from "$lib/components/main/PostCard.svelte";
     
     let mapElement: HTMLElement;
     let map: google.maps.Map;
     let desirelocation: string | undefined = $state();
+
+    // check onMount
+    let isMounted = false;
+
+    // Googles Map variables that will be decleared later after onMount.
+    let directionsService: google.maps.DirectionsService | undefined = $state();
+    let directionsRenderer: google.maps.DirectionsRenderer | undefined = $state();
 
     let { data } = $props();
     console.log(data);
 
     onMount(async () => {
         await loadGoogleMaps();
+        isMounted = true;
 
         // Initial Directions Services
-        let directionsService = new google.maps.DirectionsService();
-        let directionsRenderer = new google.maps.DirectionsRenderer();
+        directionsService = new google.maps.DirectionsService();
+        directionsRenderer = new google.maps.DirectionsRenderer();
 
         let firstplace: string;
         let secondplace: string;
@@ -38,15 +45,17 @@
                     firstplace = latLng;
                 } else {
                     secondplace = latLng;
-                    directionsService.route({
+                    directionsService?.route({
                         origin: firstplace,
                         destination: secondplace,
                         travelMode: google.maps.TravelMode.DRIVING
                     }, (result, status) => {
                         if (status === google.maps.DirectionsStatus.OK) {
                             console.log(result);
+                            console.log(result?.routes[0].legs[0].start_location.lat(), result?.routes[0].legs[0].start_location.lng());
+                            console.log(result?.routes[0].legs[0].end_location.lat(), result?.routes[0].legs[0].end_location.lng());
                             desirelocation = result?.routes[0].legs[0].start_address + ' to ' + result?.routes[0].legs[0].end_address;
-                            directionsRenderer.setDirections(result);
+                            directionsRenderer?.setDirections(result);
                         }
                     });
                     firstplace = '';
@@ -55,6 +64,22 @@
             }
         });
     });
+
+    // Reactive Event detect if start_latLng and end_latLng is changed.
+    $effect(() => {
+        if ($selectedRoute.start && $selectedRoute.end && isMounted) {
+            directionsService?.route({
+                origin: $selectedRoute.start,
+                destination: $selectedRoute.end,
+                travelMode: google.maps.TravelMode.DRIVING
+            }, (result, status) => {
+                if (status === google.maps.DirectionsStatus.OK) {
+                    desirelocation = result?.routes[0].legs[0].start_address + ' to ' + result?.routes[0].legs[0].end_address;
+                    directionsRenderer?.setDirections(result);
+                }
+            });
+        }
+    }) 
 </script>
 
 <div class="w-full flex min-h-screen font-[prompt]">
@@ -80,26 +105,10 @@
                     <Button variant="default">🔎</Button>
                     <Input placeholder="Search" />
                 </div>
-                <!-- <Card.Root class="hidden md:w-full p-4">
-                    <Card.Header>
-                        <Card.Title class="flex items-center gap-2">
-                            <Avatar.Root>
-                                <Avatar.Image src="https://media.tenor.com/Db9euJyQnbUAAAAi/chat-pouce.gif" alt="@shadcn" />
-                                <Avatar.Fallback>CN</Avatar.Fallback>
-                            </Avatar.Root>
-                            @UserA007X
-                        </Card.Title>
-                        <Card.Description>Joined November 2024</Card.Description>
-                    </Card.Header>
-                    <Card.Content>
-                        <p>สวัสดีครับ ผมคือแฮกเกอร์ครับ</p>
-                        <p>Joined November 2024</p>
-                        <p>Male, 18</p>
-                    </Card.Content>
-                </Card.Root> -->
                 {#each data.posts as post}
                     <PostCard data={post} />
                 {/each}
+                <Button class="w-[90%]" href="/main/post">Create Post</Button>
             </div>
         </div>
         

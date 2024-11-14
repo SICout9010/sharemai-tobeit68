@@ -7,14 +7,14 @@
 </script>
 
 <nav class="flex bg-base-100 p-4">
-    <div class="relative flex md:flex-1 items-center justify-start">
+    <div class="relative flex flex-1 items-center justify-start">
         <LogoWithName />
     </div>
     <div class="flex-none">
         {#if user}
         <div class="flex gap-4 items-center">
             <p class="hidden md:block">Welcome, {user.username}</p>
-            <Avatar.Root>
+            <Avatar.Root class="hidden md:block">
                 <Avatar.Image 
                 src={`${PUBLIC_POCKETBASE_URL}/api/files/${user.collectionId}/${user.id}/${user.avatar}`} alt="user-avatar" 
                 />
