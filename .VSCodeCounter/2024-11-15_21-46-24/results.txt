@@ -1,0 +1,235 @@
+Date : 2024-11-15 21:46:24
+Directory : d:\CodeProjects_2\sharemai-tobeit68
+Total : 159 files,  8863 codes, 108 comments, 577 blanks, all 9548 lines
+
+Languages
++--------------------+------------+------------+------------+------------+------------+
+| language           | files      | code       | comment    | blank      | total      |
++--------------------+------------+------------+------------+------------+------------+
+| JSON               |          4 |      4,710 |          0 |          3 |      4,713 |
+| Svelte             |        110 |      3,160 |         27 |        415 |      3,602 |
+| TypeScript         |         38 |        845 |         70 |        134 |      1,049 |
+| CSS                |          1 |         73 |          0 |         14 |         87 |
+| JavaScript         |          3 |         46 |          6 |          8 |         60 |
+| JSON with Comments |          1 |         15 |          5 |          1 |         21 |
+| HTML               |          1 |         12 |          0 |          1 |         13 |
+| Markdown           |          1 |          2 |          0 |          1 |          3 |
++--------------------+------------+------------+------------+------------+------------+
+
+Directories
++-----------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                                                    | files      | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                                       |        159 |      8,863 |        108 |        577 |      9,548 |
+| . (Files)                                                                                                                               |         10 |      4,877 |         11 |         18 |      4,906 |
+| src                                                                                                                                     |        149 |      3,986 |         97 |        559 |      4,642 |
+| src (Files)                                                                                                                             |          4 |        112 |          9 |         22 |        143 |
+| src\lib                                                                                                                                 |        130 |      2,928 |         51 |        417 |      3,396 |
+| src\lib (Files)                                                                                                                         |          4 |         30 |          4 |          6 |         40 |
+| src\lib\components                                                                                                                      |        124 |      2,869 |         47 |        404 |      3,320 |
+| src\lib\components\main                                                                                                                 |          4 |        210 |          0 |         14 |        224 |
+| src\lib\components\main (Files)                                                                                                         |          3 |         78 |          0 |          6 |         84 |
+| src\lib\components\main\profile                                                                                                         |          1 |        132 |          0 |          8 |        140 |
+| src\lib\components\ui                                                                                                                   |        120 |      2,659 |         47 |        390 |      3,096 |
+| src\lib\components\ui\alert-dialog                                                                                                      |          9 |        166 |          1 |         27 |        194 |
+| src\lib\components\ui\avatar                                                                                                            |          4 |         53 |          1 |         11 |         65 |
+| src\lib\components\ui\badge                                                                                                             |          2 |         47 |          0 |          7 |         54 |
+| src\lib\components\ui\button                                                                                                            |          2 |         83 |          1 |          9 |         93 |
+| src\lib\components\ui\calendar                                                                                                          |         14 |        278 |          5 |         43 |        326 |
+| src\lib\components\ui\card                                                                                                              |          7 |        117 |          1 |         20 |        138 |
+| src\lib\components\ui\drawer                                                                                                            |          9 |        155 |          1 |         29 |        185 |
+| src\lib\components\ui\input                                                                                                             |          2 |         25 |          1 |          5 |         31 |
+| src\lib\components\ui\label                                                                                                             |          2 |         22 |          1 |          5 |         28 |
+| src\lib\components\ui\popover                                                                                                           |          2 |         38 |          1 |          5 |         44 |
+| src\lib\components\ui\range-calendar                                                                                                    |         12 |        266 |          1 |         39 |        306 |
+| src\lib\components\ui\select                                                                                                            |          8 |        180 |          1 |         25 |        206 |
+| src\lib\components\ui\separator                                                                                                         |          2 |         25 |          1 |          5 |         31 |
+| src\lib\components\ui\sheet                                                                                                             |          7 |        162 |          1 |         24 |        187 |
+| src\lib\components\ui\sidebar                                                                                                           |         26 |        859 |         26 |        102 |        987 |
+| src\lib\components\ui\skeleton                                                                                                          |          2 |         20 |          1 |          5 |         26 |
+| src\lib\components\ui\sonner                                                                                                            |          2 |         19 |          0 |          4 |         23 |
+| src\lib\components\ui\tabs                                                                                                              |          4 |         66 |          1 |         12 |         79 |
+| src\lib\components\ui\textarea                                                                                                          |          2 |         44 |          1 |          7 |         52 |
+| src\lib\components\ui\tooltip                                                                                                           |          2 |         34 |          1 |          6 |         41 |
+| src\lib\hooks                                                                                                                           |          1 |         23 |          0 |          5 |         28 |
+| src\lib\stores                                                                                                                          |          1 |          6 |          0 |          2 |          8 |
+| src\routes                                                                                                                              |         15 |        946 |         37 |        120 |      1,103 |
+| src\routes (Files)                                                                                                                      |          3 |         72 |          6 |         16 |         94 |
+| src\routes\api                                                                                                                          |          1 |         53 |          4 |         18 |         75 |
+| src\routes\api\pay                                                                                                                      |          1 |         53 |          4 |         18 |         75 |
+| src\routes\auth                                                                                                                         |          3 |        148 |          6 |         20 |        174 |
+| src\routes\auth (Files)                                                                                                                 |          2 |        123 |          5 |         14 |        142 |
+| src\routes\auth\callback                                                                                                                |          1 |         25 |          1 |          6 |         32 |
+| src\routes\auth\callback\[provider]                                                                                                     |          1 |         25 |          1 |          6 |         32 |
+| src\routes\main                                                                                                                         |          8 |        673 |         21 |         66 |        760 |
+| src\routes\main (Files)                                                                                                                 |          3 |        220 |          8 |         22 |        250 |
+| src\routes\main\payment                                                                                                                 |          1 |        124 |          1 |         10 |        135 |
+| src\routes\main\post                                                                                                                    |          2 |        206 |          8 |         26 |        240 |
+| src\routes\main\profile                                                                                                                 |          2 |        123 |          4 |          8 |        135 |
++-----------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-----------------------------------------------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| filename                                                                                                                                | language           | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| d:\CodeProjects_2\sharemai-tobeit68\README.md                                                                                           | Markdown           |          2 |          0 |          1 |          3 |
+| d:\CodeProjects_2\sharemai-tobeit68\components.json                                                                                     | JSON               |         17 |          0 |          1 |         18 |
+| d:\CodeProjects_2\sharemai-tobeit68\eslint.config.js                                                                                    | JavaScript         |         28 |          0 |          3 |         31 |
+| d:\CodeProjects_2\sharemai-tobeit68\package-lock.json                                                                                   | JSON               |      4,643 |          0 |          1 |      4,644 |
+| d:\CodeProjects_2\sharemai-tobeit68\package.json                                                                                        | JSON               |         49 |          0 |          1 |         50 |
+| d:\CodeProjects_2\sharemai-tobeit68\postcss.config.js                                                                                   | JavaScript         |          6 |          0 |          1 |          7 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\app.css                                                                                         | CSS                |         73 |          0 |         14 |         87 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\app.d.ts                                                                                        | TypeScript         |         12 |          9 |          3 |         24 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\app.html                                                                                        | HTML               |         12 |          0 |          1 |         13 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\hooks.server.ts                                                                                 | TypeScript         |         15 |          0 |          4 |         19 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\client_secret_350137452080-t6977uutmdaiv57pek3otot8g0dgqjm9.apps.googleusercontent.com.json | JSON               |          1 |          0 |          0 |          1 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\main\Header.svelte                                                               | Svelte             |         31 |          0 |          1 |         32 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\main\LogoWithName.svelte                                                         | Svelte             |          7 |          0 |          2 |          9 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\main\PostCard.svelte                                                             | Svelte             |         40 |          0 |          3 |         43 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\main\profile\YearCalender.svelte                                                 | Svelte             |        132 |          0 |          8 |        140 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\alert-dialog\alert-dialog-action.svelte                                       | Svelte             |         11 |          0 |          3 |         14 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\alert-dialog\alert-dialog-cancel.svelte                                       | Svelte             |         15 |          0 |          3 |         18 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\alert-dialog\alert-dialog-content.svelte                                      | Svelte             |         21 |          0 |          3 |         24 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\alert-dialog\alert-dialog-description.svelte                                  | Svelte             |         14 |          0 |          3 |         17 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\alert-dialog\alert-dialog-footer.svelte                                       | Svelte             |         18 |          0 |          3 |         21 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\alert-dialog\alert-dialog-header.svelte                                       | Svelte             |         18 |          0 |          3 |         21 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\alert-dialog\alert-dialog-overlay.svelte                                      | Svelte             |         17 |          0 |          3 |         20 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\alert-dialog\alert-dialog-title.svelte                                        | Svelte             |         16 |          0 |          3 |         19 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\alert-dialog\index.ts                                                         | TypeScript         |         36 |          1 |          3 |         40 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\avatar\avatar-fallback.svelte                                                 | Svelte             |         14 |          0 |          3 |         17 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\avatar\avatar-image.svelte                                                    | Svelte             |         14 |          0 |          3 |         17 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\avatar\avatar.svelte                                                          | Svelte             |         14 |          0 |          3 |         17 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\avatar\index.ts                                                               | TypeScript         |         11 |          1 |          2 |         14 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\badge\badge.svelte                                                            | Svelte             |         45 |          0 |          6 |         51 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\badge\index.ts                                                                | TypeScript         |          2 |          0 |          1 |          3 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\button\button.svelte                                                          | Svelte             |         68 |          0 |          7 |         75 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\button\index.ts                                                               | TypeScript         |         15 |          1 |          2 |         18 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\calendar\calendar-cell.svelte                                                 | Svelte             |         17 |          0 |          3 |         20 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\calendar\calendar-day.svelte                                                  | Svelte             |         28 |          0 |          3 |         31 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\calendar\calendar-grid-body.svelte                                            | Svelte             |         10 |          0 |          3 |         13 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\calendar\calendar-grid-head.svelte                                            | Svelte             |         10 |          0 |          3 |         13 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\calendar\calendar-grid-row.svelte                                             | Svelte             |         10 |          0 |          3 |         13 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\calendar\calendar-grid.svelte                                                 | Svelte             |         14 |          0 |          3 |         17 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\calendar\calendar-head-cell.svelte                                            | Svelte             |         14 |          0 |          3 |         17 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\calendar\calendar-header.svelte                                               | Svelte             |         14 |          0 |          3 |         17 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\calendar\calendar-heading.svelte                                              | Svelte             |         10 |          0 |          3 |         13 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\calendar\calendar-months.svelte                                               | Svelte             |         18 |          0 |          3 |         21 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\calendar\calendar-next-button.svelte                                          | Svelte             |         25 |          0 |          4 |         29 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\calendar\calendar-prev-button.svelte                                          | Svelte             |         25 |          0 |          4 |         29 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\calendar\calendar.svelte                                                      | Svelte             |         55 |          4 |          3 |         62 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\calendar\index.ts                                                             | TypeScript         |         28 |          1 |          2 |         31 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\card\card-content.svelte                                                      | Svelte             |         14 |          0 |          3 |         17 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\card\card-description.svelte                                                  | Svelte             |         14 |          0 |          3 |         17 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\card\card-footer.svelte                                                       | Svelte             |         14 |          0 |          3 |         17 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\card\card-header.svelte                                                       | Svelte             |         14 |          0 |          3 |         17 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\card\card-title.svelte                                                        | Svelte             |         23 |          0 |          3 |         26 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\card\card.svelte                                                              | Svelte             |         18 |          0 |          3 |         21 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\card\index.ts                                                                 | TypeScript         |         20 |          1 |          2 |         23 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\drawer\drawer-content.svelte                                                  | Svelte             |         25 |          0 |          3 |         28 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\drawer\drawer-description.svelte                                              | Svelte             |         14 |          0 |          3 |         17 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\drawer\drawer-footer.svelte                                                   | Svelte             |         14 |          0 |          3 |         17 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\drawer\drawer-header.svelte                                                   | Svelte             |         18 |          0 |          3 |         21 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\drawer\drawer-nested.svelte                                                   | Svelte             |         10 |          0 |          3 |         13 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\drawer\drawer-overlay.svelte                                                  | Svelte             |         14 |          0 |          3 |         17 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\drawer\drawer-title.svelte                                                    | Svelte             |         14 |          0 |          3 |         17 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\drawer\drawer.svelte                                                          | Svelte             |         10 |          0 |          3 |         13 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\drawer\index.ts                                                               | TypeScript         |         36 |          1 |          5 |         42 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\input\index.ts                                                                | TypeScript         |          5 |          1 |          2 |          8 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\input\input.svelte                                                            | Svelte             |         20 |          0 |          3 |         23 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\label\index.ts                                                                | TypeScript         |          5 |          1 |          2 |          8 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\label\label.svelte                                                            | Svelte             |         17 |          0 |          3 |         20 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\popover\index.ts                                                              | TypeScript         |         15 |          1 |          2 |         18 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\popover\popover-content.svelte                                                | Svelte             |         23 |          0 |          3 |         26 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\range-calendar\index.ts                                                       | TypeScript         |         29 |          1 |          3 |         33 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\range-calendar\range-calendar-cell.svelte                                     | Svelte             |         17 |          0 |          3 |         20 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\range-calendar\range-calendar-day.svelte                                      | Svelte             |         31 |          0 |          4 |         35 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\range-calendar\range-calendar-grid-row.svelte                                 | Svelte             |         10 |          0 |          3 |         13 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\range-calendar\range-calendar-grid.svelte                                     | Svelte             |         14 |          0 |          3 |         17 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\range-calendar\range-calendar-head-cell.svelte                                | Svelte             |         14 |          0 |          3 |         17 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\range-calendar\range-calendar-header.svelte                                   | Svelte             |         14 |          0 |          3 |         17 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\range-calendar\range-calendar-heading.svelte                                  | Svelte             |         14 |          0 |          3 |         17 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\range-calendar\range-calendar-months.svelte                                   | Svelte             |         18 |          0 |          3 |         21 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\range-calendar\range-calendar-next-button.svelte                              | Svelte             |         25 |          0 |          4 |         29 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\range-calendar\range-calendar-prev-button.svelte                              | Svelte             |         25 |          0 |          4 |         29 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\range-calendar\range-calendar.svelte                                          | Svelte             |         55 |          0 |          3 |         58 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\select\index.ts                                                               | TypeScript         |         30 |          1 |          4 |         35 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\select\select-content.svelte                                                  | Svelte             |         34 |          0 |          3 |         37 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\select\select-group-heading.svelte                                            | Svelte             |         14 |          0 |          3 |         17 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\select\select-item.svelte                                                     | Svelte             |         35 |          0 |          3 |         38 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\select\select-scroll-down-button.svelte                                       | Svelte             |         17 |          0 |          3 |         20 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\select\select-scroll-up-button.svelte                                         | Svelte             |         17 |          0 |          3 |         20 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\select\select-separator.svelte                                                | Svelte             |         11 |          0 |          3 |         14 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\select\select-trigger.svelte                                                  | Svelte             |         22 |          0 |          3 |         25 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\separator\index.ts                                                            | TypeScript         |          5 |          1 |          2 |          8 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\separator\separator.svelte                                                    | Svelte             |         20 |          0 |          3 |         23 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\sheet\index.ts                                                                | TypeScript         |         33 |          1 |          3 |         37 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\sheet\sheet-content.svelte                                                    | Svelte             |         47 |          0 |          5 |         52 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\sheet\sheet-description.svelte                                                | Svelte             |         14 |          0 |          3 |         17 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\sheet\sheet-footer.svelte                                                     | Svelte             |         18 |          0 |          3 |         21 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\sheet\sheet-header.svelte                                                     | Svelte             |         18 |          0 |          3 |         21 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\sheet\sheet-overlay.svelte                                                    | Svelte             |         18 |          0 |          4 |         22 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\sheet\sheet-title.svelte                                                      | Svelte             |         14 |          0 |          3 |         17 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\sidebar\constants.ts                                                          | TypeScript         |          6 |          0 |          1 |          7 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\sidebar\context.svelte.ts                                                     | TypeScript         |         45 |         24 |         13 |         82 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\sidebar\index.ts                                                              | TypeScript         |         73 |          1 |          2 |         76 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\sidebar\sidebar-content.svelte                                                | Svelte             |         22 |          0 |          3 |         25 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\sidebar\sidebar-footer.svelte                                                 | Svelte             |         19 |          0 |          3 |         22 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\sidebar\sidebar-group-action.svelte                                           | Svelte             |         33 |          0 |          4 |         37 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\sidebar\sidebar-group-content.svelte                                          | Svelte             |         19 |          0 |          3 |         22 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\sidebar\sidebar-group-label.svelte                                            | Svelte             |         31 |          0 |          4 |         35 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\sidebar\sidebar-group.svelte                                                  | Svelte             |         19 |          0 |          3 |         22 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\sidebar\sidebar-header.svelte                                                 | Svelte             |         19 |          0 |          3 |         22 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\sidebar\sidebar-input.svelte                                                  | Svelte             |         21 |          0 |          3 |         24 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\sidebar\sidebar-inset.svelte                                                  | Svelte             |         22 |          0 |          3 |         25 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\sidebar\sidebar-menu-action.svelte                                            | Svelte             |         40 |          0 |          4 |         44 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\sidebar\sidebar-menu-badge.svelte                                             | Svelte             |         27 |          0 |          3 |         30 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\sidebar\sidebar-menu-button.svelte                                            | Svelte             |         89 |          0 |          9 |         98 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\sidebar\sidebar-menu-item.svelte                                              | Svelte             |         19 |          0 |          3 |         22 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\sidebar\sidebar-menu-skeleton.svelte                                          | Svelte             |         33 |          0 |          4 |         37 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\sidebar\sidebar-menu-sub-button.svelte                                        | Svelte             |         40 |          0 |          4 |         44 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\sidebar\sidebar-menu-sub-item.svelte                                          | Svelte             |         12 |          0 |          3 |         15 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\sidebar\sidebar-menu-sub.svelte                                               | Svelte             |         23 |          0 |          3 |         26 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\sidebar\sidebar-menu.svelte                                                   | Svelte             |         19 |          0 |          3 |         22 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\sidebar\sidebar-provider.svelte                                               | Svelte             |         54 |          0 |          6 |         60 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\sidebar\sidebar-rail.svelte                                                   | Svelte             |         33 |          0 |          4 |         37 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\sidebar\sidebar-separator.svelte                                              | Svelte             |         16 |          0 |          3 |         19 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\sidebar\sidebar-trigger.svelte                                                | Svelte             |         31 |          0 |          4 |         35 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\sidebar\sidebar.svelte                                                        | Svelte             |         94 |          1 |          4 |         99 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\skeleton\index.ts                                                             | TypeScript         |          5 |          1 |          2 |          8 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\skeleton\skeleton.svelte                                                      | Svelte             |         15 |          0 |          3 |         18 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\sonner\index.ts                                                               | TypeScript         |          1 |          0 |          1 |          2 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\sonner\sonner.svelte                                                          | Svelte             |         18 |          0 |          3 |         21 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\tabs\index.ts                                                                 | TypeScript         |         15 |          1 |          3 |         19 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\tabs\tabs-content.svelte                                                      | Svelte             |         17 |          0 |          3 |         20 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\tabs\tabs-list.svelte                                                         | Svelte             |         17 |          0 |          3 |         20 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\tabs\tabs-trigger.svelte                                                      | Svelte             |         17 |          0 |          3 |         20 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\textarea\index.ts                                                             | TypeScript         |         24 |          1 |          4 |         29 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\textarea\textarea.svelte                                                      | Svelte             |         20 |          0 |          3 |         23 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\tooltip\index.ts                                                              | TypeScript         |         15 |          1 |          3 |         19 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\components\ui\tooltip\tooltip-content.svelte                                                | Svelte             |         19 |          0 |          3 |         22 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\google.ts                                                                                   | TypeScript         |         21 |          2 |          3 |         26 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\hooks\is-mobile.svelte.ts                                                                   | TypeScript         |         23 |          0 |          5 |         28 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\index.ts                                                                                    | TypeScript         |          0 |          1 |          1 |          2 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\stores\route.ts                                                                             | TypeScript         |          6 |          0 |          2 |          8 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\lib\utils.ts                                                                                    | TypeScript         |          8 |          1 |          2 |         11 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\routes\+layout.server.ts                                                                        | TypeScript         |         12 |          0 |          1 |         13 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\routes\+layout.svelte                                                                           | Svelte             |         10 |          0 |          3 |         13 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\routes\+page.svelte                                                                             | Svelte             |         50 |          6 |         12 |         68 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\routes\api\pay\+server.ts                                                                       | TypeScript         |         53 |          4 |         18 |         75 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\routes\auth\+page.server.ts                                                                     | TypeScript         |         26 |          2 |          6 |         34 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\routes\auth\+page.svelte                                                                        | Svelte             |         97 |          3 |          8 |        108 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\routes\auth\callback\[provider]\+server.ts                                                      | TypeScript         |         25 |          1 |          6 |         32 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\routes\main\+layout.server.ts                                                                   | TypeScript         |         14 |          1 |          3 |         18 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\routes\main\+layout.svelte                                                                      | Svelte             |        109 |          3 |          3 |        115 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\routes\main\+page.svelte                                                                        | Svelte             |         97 |          4 |         16 |        117 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\routes\main\payment\+page.svelte                                                                | Svelte             |        124 |          1 |         10 |        135 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\routes\main\post\+page.server.ts                                                                | TypeScript         |         52 |          5 |          8 |         65 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\routes\main\post\+page.svelte                                                                   | Svelte             |        154 |          3 |         18 |        175 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\routes\main\profile\+page.server.ts                                                             | TypeScript         |         19 |          2 |          3 |         24 |
+| d:\CodeProjects_2\sharemai-tobeit68\src\routes\main\profile\+page.svelte                                                                | Svelte             |        104 |          2 |          5 |        111 |
+| d:\CodeProjects_2\sharemai-tobeit68\svelte.config.js                                                                                    | JavaScript         |         12 |          6 |          4 |         22 |
+| d:\CodeProjects_2\sharemai-tobeit68\tailwind.config.ts                                                                                  | TypeScript         |         94 |          0 |          3 |         97 |
+| d:\CodeProjects_2\sharemai-tobeit68\tsconfig.json                                                                                       | JSON with Comments |         15 |          5 |          1 |         21 |
+| d:\CodeProjects_2\sharemai-tobeit68\vite.config.ts                                                                                      | TypeScript         |         11 |          0 |          2 |         13 |
+| Total                                                                                                                                   |                    |      8,863 |        108 |        577 |      9,548 |
++-----------------------------------------------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+

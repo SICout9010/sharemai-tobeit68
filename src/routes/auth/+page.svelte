@@ -4,9 +4,22 @@
     import type { PageData } from "./$types";
     import Button from "$lib/components/ui/button/button.svelte";
     import * as Avatar from '$lib/components/ui/avatar'
+    import * as Card from '$lib/components/ui/card';
+    import Label from "$lib/components/ui/label/label.svelte";
+    import Input from "$lib/components/ui/input/input.svelte";
     import Google from 'virtual:icons/mdi/google';
+    import IdCardOutline from 'virtual:icons/mdi/id-card-outline';
 
-    export let data: PageData;
+    let { data }: { data: PageData } = $props()
+    let realName = $state("");
+    let identityNumber = $state("");
+    let facePhoto: FileList | null = $state(null);
+
+    function handleSubmit() {
+        // Placeholder for form submission
+        console.log({ realName, identityNumber, facePhoto });
+    }
+
     let user = data.user;
 </script>
 
@@ -39,7 +52,57 @@
         </div>
         <!-- Side background -->
         <div class="hidden md:flex bg-[#475569] w-[50%] h-screen">
-
+            <!-- Security Form, Input identity-number, FacePhoto, RealName -->
+            <Card.Root class="max-w-md mx-auto my-auto h-auto">
+                <Card.Header>
+                  <Card.Title>Security Verification</Card.Title>
+                  <Card.Description>
+                    Please provide your personal information for verification purposes
+                  </Card.Description>
+                </Card.Header>
+                <Card.Content>
+                  <form onsubmit={handleSubmit} class="space-y-6">
+                    <IdCardOutline class="w-16 h-16" />
+                    <div class="space-y-2">
+                      <Label for="realName">Real Name</Label>
+                      <Input
+                        id="realName"
+                        type="text"
+                        bind:value={realName}
+                        placeholder="Enter your legal name"
+                        required
+                      />
+                    </div>
+            
+                    <div class="space-y-2">
+                      <Label for="identityNumber">Identity Number</Label>
+                      <Input
+                        id="identityNumber"
+                        type="text"
+                        bind:value={identityNumber}
+                        placeholder="Enter your ID number"
+                        required
+                      />
+                    </div>
+            
+                    <div class="space-y-2">
+                      <Label for="facePhoto">Face Photo</Label>
+                      <Input
+                        id="facePhoto"
+                        type="file"
+                        accept="image/*"
+                        bind:value={facePhoto}
+                        required
+                      />
+                      <p class="text-sm text-gray-500">
+                        Please upload a clear photo of your face
+                      </p>
+                    </div>
+            
+                    <Button type="submit" class="w-full">Submit Verification</Button>
+                  </form>
+                </Card.Content>
+              </Card.Root>
         </div>
     </div>
 </div>

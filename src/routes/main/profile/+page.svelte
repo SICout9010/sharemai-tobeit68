@@ -49,7 +49,7 @@
                     </div>
                 </div>
                 <div class="flex flex-col items-center justify-center gap-4">
-                    <p class="text-4xl">${data.user?.credits ?? 0}</p>
+                    <p class="text-4xl">THB{data.user?.credits ?? 0}</p>
                     <Button class="shadow-lg" variant="outline" href='/main/payment'>Payment</Button>
                 </div>
             </Card.Content>

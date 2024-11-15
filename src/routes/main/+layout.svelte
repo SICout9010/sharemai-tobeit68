@@ -22,10 +22,10 @@
                     <Sidebar.MenuItem>
                         {#if $page.url.pathname === '/main'}
                             <div class="flex flex-col items-center justify-center">
-                                <p class="text-4xl">$ {data.user?.credits ?? 0}</p>
+                                <p class="text-4xl">THB {data.user?.credits ?? 0}</p>
                                 <p class="text-sm">Available Balance</p>
                                 <Sidebar.MenuButton>
-                                    <a href="/main/payment">Payment</a>
+                                    <a href="/main/payment" class="w-full">Payment</a>
                                 </Sidebar.MenuButton>
                             </div>
                         {:else}
@@ -41,17 +41,17 @@
                     </Sidebar.MenuItem>
                     <Sidebar.MenuItem>
                         <Sidebar.MenuButton>
-                            <a href="/main">Home</a>
+                            <a href="/main" class="w-full">Home</a>
                         </Sidebar.MenuButton>
                     </Sidebar.MenuItem>
                     <Sidebar.MenuItem>
                         <Sidebar.MenuButton>
-                            <a href="/settings">Settings</a>
+                            <a href="#" class="w-full">Settings</a>
                         </Sidebar.MenuButton>
                     </Sidebar.MenuItem>
                     <Sidebar.MenuItem>
                         <Sidebar.MenuButton>
-                            <a href="/main/profile">Profile</a>
+                            <a href="/main/profile" class="w-full">Profile</a>
                         </Sidebar.MenuButton>
                     </Sidebar.MenuItem>
                 </Sidebar.Menu>

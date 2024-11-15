@@ -8,7 +8,7 @@
     import { loadGoogleMaps, defaultConfig } from '$lib/google';
     import MapMarkerRadiusOutline from 'virtual:icons/mdi/map-marker-radius-outline';
     import Label from "$lib/components/ui/label/label.svelte";
-  import { enhance } from "$app/forms";
+    import { enhance } from "$app/forms";
     
     let mapElement: HTMLElement;
     let map: google.maps.Map;
@@ -99,14 +99,14 @@
     <!-- Main Content -->
     <div class="flex-1 w-full min-h-screen md:p-4">
 
-        <div class="relative flex items-center justify-center gap-10 h-full">
+        <div class="relative flex flex-col md:flex-row items-center justify-center gap-10 h-full">
             <!-- Googles Map -->
             <div class="w-full md:w-[50%] h-full space-y-4">
                 <div class="bg-muted w-full min-h-[8vh] rounded-lg shadow-lg flex items-center">
                     <MapMarkerRadiusOutline class="w-12 h-12 m-2" />
                     <p>{desirelocation}</p>
                 </div>
-                <div bind:this={mapElement} class="w-full h-full rounded-lg shadow-lg flex items-center justify-center">
+                <div bind:this={mapElement} class="w-full h-[50vh] md:h-full rounded-lg shadow-lg flex items-center justify-center">
     
                 </div>
             </div>
@@ -124,12 +124,12 @@
                             <Input type="text" name="user_id" value={data.user?.id} class="hidden" formnovalidate  />
                             <div>
                                 <Label for="departure_location">Departure Location</Label>
-                                <Input type="text" name="departure_location" bind:value={firstplace} readonly placeholder="Departure Location" />
+                                <Input type="text" required name="departure_location" bind:value={firstplace} readonly placeholder="Departure Location" />
                                 <p class="text-muted-foreground text-sm">Click on the map to select the location.</p>
                             </div>
                             <div>
                                 <Label for="destination">Destination</Label>
-                                <Input type="text" name="destination" bind:value={secondplace} readonly placeholder="Destination" />
+                                <Input type="text" required name="destination" bind:value={secondplace} readonly placeholder="Destination" />
                                 <p class="text-muted-foreground text-sm">Click on the map to select the location.</p>
                             </div>
                             <div class="flex w-full justify-between gap-4">
@@ -145,7 +145,7 @@
                                         </Select.Trigger>
                                         <Select.Content>
                                           <Select.Group>
-                                            <Select.GroupHeading>Sex</Select.GroupHeading>
+                                            <Select.GroupHeading>Gender</Select.GroupHeading>
                                             {#each sex_preferences as sex}
                                               <Select.Item value={sex.value} label={sex.label}>
                                                 {sex.label}
@@ -158,7 +158,7 @@
                             </div>
                             <div>
                                 <Label for="additional_notes">Additional Notes</Label>
-                                <Textarea name="additional_notes" placeholder="Additional Notes" />
+                                <Textarea required name="additional_notes" placeholder="Additional Notes" />
                             </div>
                             <div class="flex flex-col items-center justify-center">
                                 <Label for="possible_costs">Possible Costs</Label>

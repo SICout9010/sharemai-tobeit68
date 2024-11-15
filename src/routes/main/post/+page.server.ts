@@ -17,10 +17,24 @@ export const actions = {
 		const data = await request.formData();
         const { user_id, departure_location, destination, seats, prefer_sex, additional_notes, distance_km } = Object.fromEntries(data);
 
+        // Case Guards
+        if (!user_id || !departure_location || !destination || !seats || !prefer_sex || !additional_notes || !distance_km) {
+            return { success: false };
+        }
+
         // Calculate cost per person using distance_km, 10THB per km
         let costs = Number(distance_km) * 10;
         costs /= Number(seats);
         costs.toFixed(2);
+
+        // Check if user credits are enough to create post( costs > credits )
+        // const user = await locals.pb.collection('users').getOne(user_id.toString());
+        // if (!user) {
+        //     return { success: false };
+        // }
+        // if (user.credits < costs) {
+        //     return { success: false };
+        // }
 
         // Create JSON Data for sending to Pocketbase
         const send_data = {
