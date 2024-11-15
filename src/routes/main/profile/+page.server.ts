@@ -1,17 +1,3 @@
-export const load = ({ locals }) => {
-    if (locals.user) {
-        console.log("User exists")
-        return {
-            user: locals.user
-        }
-    }
-    
-    console.log("User does not exist")
-    return {
-        user: undefined
-    }
-}
-
 export const actions = {
 	update_info: async ({ locals, request }) => {
 		const data = await request.formData();

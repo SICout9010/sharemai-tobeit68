@@ -2,6 +2,7 @@
     import { PUBLIC_POCKETBASE_URL } from "$env/static/public";
     import * as Card from "$lib/components/ui/card";
     import * as Avatar from "$lib/components/ui/avatar";
+    import Badge from "../ui/badge/badge.svelte";
     import { selectedRoute } from "$lib/stores/route";
     import type { RecordModel } from "pocketbase";
 
@@ -29,4 +30,14 @@
     <Card.Content>
         <p>{data.additional_notes}</p>
     </Card.Content>
+    <Card.Footer class="space-x-4">
+        <div>
+            <Badge>Available Seats: </Badge>
+            {data.available_seats}
+        </div>
+        <div>
+            <Badge>Gender preference:</Badge>
+            {data.preferences.sex.charAt(0).toUpperCase() + data.preferences.sex.slice(1)}
+        </div>
+    </Card.Footer>
 </Card.Root>
