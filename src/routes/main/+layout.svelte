@@ -82,13 +82,13 @@
                         <ArrowBigUp class="h-6 w-6" />
                         <span class="text-xs">Posts</span>
                     </Drawer.Trigger>
-                    <Drawer.Content class="overflow-auto">
+                    <Drawer.Content>
                     <Drawer.Header>
                         <Drawer.Title>Posts</Drawer.Title>
                         <Drawer.Description>@2024 Sharemai</Drawer.Description>
                     </Drawer.Header>
                     <!-- For loop for each posts -->
-                    <div class="flex flex-col items-center justify-center gap-4 overflow-scroll [-webkit-overflow-scrolling:touch]">
+                    <div class="flex flex-col items-center justify-center gap-4 max-h-[90dvh] overflow-auto">
                         {#each data.posts as post}
                                 <PostCard data={post} />
                         {/each}
