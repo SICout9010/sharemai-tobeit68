@@ -30,7 +30,7 @@
     <Card.Content>
         <p>{data.additional_notes}</p>
     </Card.Content>
-    <Card.Footer class="space-x-4">
+    <Card.Footer class="flex flex-col items-start">
         <div>
             <Badge>Available Seats: </Badge>
             {data.available_seats}
@@ -38,6 +38,10 @@
         <div>
             <Badge>Gender preference:</Badge>
             {data.preferences.sex.charAt(0).toUpperCase() + data.preferences.sex.slice(1)}
+        </div>
+        <div>
+            <Badge>Cost per person</Badge>
+            {data.cost_per_person.toFixed(2)}บาท
         </div>
     </Card.Footer>
 </Card.Root>

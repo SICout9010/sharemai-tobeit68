@@ -99,7 +99,7 @@
             </div>
 
             <!-- Profile Cards --> 
-            <div class="hidden md:flex flex-col items-center justify-start gap-10 w-full h-full md:w-[50%]">
+            <div class="hidden md:flex flex-col items-start justify-start gap-10 w-full h-full md:w-[50%]">
                 <!-- Top Navigation -->
                 <div class="hidden md:flex justify-between items-center gap-2 w-full h-[5vh]">
                     <Button variant="default">🔎</Button>
